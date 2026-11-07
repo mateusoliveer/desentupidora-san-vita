@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Desentupidora SanVita | Aracaju 24 horas</title>
+<meta name="description" content="Esgoto voltando, pia ou vaso entupido em Aracaju? A SanVita atende 24 horas. Orçamento sem custo e 10% off na primeira solicitação.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F5F7FA; --white:#fff; --ink:#0A1630; --muted:#4A5873;
+  --blue:#1546D6; --red:#E0202E; --wa:#128C4A; --line:#DCE2EC;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body);padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+
+/* topo */
+.top{background:var(--ink);color:#fff;font-size:.9rem}
+.top .wrap{display:flex;gap:10px;align-items:center;justify-content:space-between;padding-top:10px;padding-bottom:10px;padding-top:calc(10px + env(safe-area-inset-top,0px))}
+.live{display:flex;align-items:center;gap:8px;font-weight:600}
+.dot{width:9px;height:9px;border-radius:50%;background:#35E27B;box-shadow:0 0 0 0 #35E27B;animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.top a{text-decoration:none;font-weight:600}
+nav.brand{background:var(--white);border-bottom:1px solid var(--line)}
+nav.brand .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.logo{font:800 1.5rem var(--display);letter-spacing:-.03em}
+.logo b{color:var(--red)} .logo i{font-style:normal;color:var(--blue)}
+.logo small{display:block;font:600 .62rem var(--body);letter-spacing:.14em;color:var(--muted);margin-top:-2px}
+
+/* hero */
+.hero{padding:48px 0 56px}
+.hero h1{font-size:clamp(2.3rem,7.5vw,4.4rem);font-weight:800;max-width:15ch}
+.hero h1 em{font-style:normal;color:var(--red)}
+.lead{margin-top:18px;max-width:46ch;color:var(--muted);font-size:1.15rem}
+.picker{margin-top:30px;background:var(--white);border:1px solid var(--line);border-radius:22px;padding:22px;max-width:560px;box-shadow:0 18px 40px -24px rgba(10,22,48,.35)}
+.picker h2{font-size:1.15rem;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:500 1rem var(--body);border:1.5px solid var(--line);background:var(--paper);color:var(--ink);padding:10px 16px;border-radius:999px;cursor:pointer;min-height:44px;transition:background .15s,border-color .15s,color .15s}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.picker label{display:block;margin:16px 0 6px;font-weight:600;font-size:.95rem}
+.picker input{width:100%;font:inherit;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--paper)}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font:700 1.1rem var(--display);padding:16px 22px;border-radius:14px;min-height:56px;transition:transform .15s}
+.btn:active{transform:scale(.98)}
+.btn.wa{background:var(--wa);color:#fff;margin-top:18px}
+.btn.blue{background:var(--blue);color:#fff}
+.micro{margin-top:12px;font-size:.88rem;color:var(--muted)}
+.micro b{color:var(--ink)}
+
+/* contraste: risco x ganho */
+.split{display:grid;gap:16px;margin-top:28px}
+.card{border-radius:22px;padding:26px}
+.card h3{font-size:1.35rem;margin-bottom:14px}
+.card ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.card li{padding-left:28px;position:relative}
+.card li::before{content:"";position:absolute;left:0;top:.45em;width:14px;height:14px;border-radius:50% 50% 50% 0;transform:rotate(-45deg)}
+.risk{background:var(--ink);color:#fff}
+.risk li::before{background:var(--red)}
+.gain{background:var(--white);border:1px solid var(--line)}
+.gain li::before{background:var(--blue)}
+h2.title{font-size:clamp(1.9rem,5vw,2.9rem);max-width:20ch}
+.sub{margin-top:12px;color:var(--muted);max-width:52ch}
+
+/* serviços */
+.svc{margin-top:28px;display:grid;gap:0;border-top:1px solid var(--line)}
+.svc a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 4px;border-bottom:1px solid var(--line);text-decoration:none}
+.svc strong{font:700 1.2rem var(--display)}
+.svc span{color:var(--muted);font-size:.95rem;display:block}
+.svc em{font-style:normal;color:var(--blue);font-weight:600;white-space:nowrap}
+
+/* passos */
+.steps{counter-reset:s;margin:28px 0 0;padding:0;list-style:none;display:grid;gap:14px}
+.steps li{counter-increment:s;background:var(--white);border:1px solid var(--line);border-radius:18px;padding:20px 20px 20px 72px;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:18px;top:18px;width:38px;height:38px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--blue);color:#fff;display:grid;place-items:center;font:800 1.1rem var(--display)}
+.steps li span{display:block;transform:none}
+.steps b{display:block;font:700 1.15rem var(--display)}
+
+/* oferta */
+.offer{background:var(--blue);color:#fff;border-radius:28px;padding:36px 26px;text-align:left}
+.offer h2{font-size:clamp(2rem,6vw,3.2rem);max-width:16ch}
+.offer p{margin-top:12px;max-width:46ch;opacity:.92}
+.offer .btn{background:#fff;color:var(--blue);margin-top:22px;max-width:360px}
+
+/* prova */
+blockquote{margin:28px 0 0;background:var(--white);border:1px solid var(--line);border-radius:22px;padding:26px;font:500 1.25rem/1.45 var(--display);max-width:640px}
+blockquote footer{margin-top:14px;font:400 .95rem var(--body);color:var(--muted)}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{cursor:pointer;font:700 1.15rem var(--display);list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--blue);font-size:1.5rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:10px;color:var(--muted);max-width:60ch}
+.faq{margin-top:20px;border-top:1px solid var(--line)}
+
+footer.site{background:var(--ink);color:#C7D0E2;padding:40px 0 32px;font-size:.95rem}
+footer.site a{color:#fff}
+footer.site .demo{margin-top:18px;font-size:.82rem;opacity:.7}
+
+/* barra fixa */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1.4fr 1fr;gap:8px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px))}
+.bar .btn{margin:0;padding:12px;font-size:1rem;min-height:52px}
+.bar .call{background:var(--ink);color:#fff}
+
+@media(min-width:760px){
+  .split{grid-template-columns:1fr 1fr}
+  .hero{padding:72px 0}
+  .bar{left:auto;right:20px;bottom:20px;width:420px;border:1px solid var(--line);border-radius:18px}
+  body{padding-bottom:0}
+}
+@media(prefers-reduced-motion:reduce){.dot{animation:none}*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<div class="top"><div class="wrap">
+  <span class="live"><span class="dot" aria-hidden="true"></span>Atendimento 24 horas em Aracaju e região</span>
+  <a href="tel:+5579998240488">(79) 99824-0488</a>
+</div></div>
+
+<nav class="brand" aria-label="Marca"><div class="wrap">
+  <div class="logo"><b>SAN</b><i>VITA</i><small>DESENTUPIDORA</small></div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <h1>Esgoto voltando? <em>Não espere</em> piorar.</h1>
+  <p class="lead">Um técnico da SanVita resolve pia, vaso, ralo, esgoto e caixa de gordura em Aracaju. Escolha o problema e fale com a gente agora.</p>
+
+  <div class="picker" id="pedido">
+    <h2>O que está entupido?</h2>
+    <div class="chips" role="group" aria-label="Tipo de problema">
+      <button class="chip" type="button" aria-pressed="true">Pia</button>
+      <button class="chip" type="button" aria-pressed="false">Vaso</button>
+      <button class="chip" type="button" aria-pressed="false">Ralo</button>
+      <button class="chip" type="button" aria-pressed="false">Esgoto</button>
+      <button class="chip" type="button" aria-pressed="false">Caixa de gordura</button>
+    </div>
+    <label for="bairro">Seu bairro</label>
+    <input id="bairro" type="text" placeholder="Ex.: Atalaia, Farolândia, Centro" autocomplete="address-level3">
+    <a class="btn wa" id="go" href="#" target="_blank" rel="noopener">Chamar técnico no WhatsApp</a>
+    <p class="micro"><b>Orçamento sem custo.</b> Sua mensagem já vai pronta, é só enviar.</p>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <h2 class="title">Esperar sai mais caro que resolver.</h2>
+  <p class="sub">Entupimento não some sozinho. Veja os dois caminhos.</p>
+  <div class="split">
+    <div class="card risk">
+      <h3>Se você deixar para depois</h3>
+      <ul>
+        <li>O mau cheiro se espalha pela casa ou pelo escritório.</li>
+        <li>A água volta pelo ralo e pode alagar o piso.</li>
+        <li>Umidade e infiltração viram reforma.</li>
+        <li>Sujeira parada atrai insetos e traz risco à saúde.</li>
+      </ul>
+    </div>
+    <div class="card gain">
+      <h3>Se você chamar agora</h3>
+      <ul>
+        <li>Desobstrução completa com equipamento profissional.</li>
+        <li>Equipe técnica em cada bairro de Aracaju.</li>
+        <li>Orçamento sem custo, sem surpresa.</li>
+        <li>Tubulação livre e menos chance de o problema voltar.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2 class="title">Serviços</h2>
+  <div class="svc" id="servicos">
+    <a href="#pedido"><div><strong>Desentupimento de pia</strong><span>Cozinha, banheiro e área de serviço.</span></div><em>Chamar</em></a>
+    <a href="#pedido"><div><strong>Desentupimento de vaso</strong><span>Sem quebrar e sem improviso.</span></div><em>Chamar</em></a>
+    <a href="#pedido"><div><strong>Ralos e tubulações</strong><span>Limpa e previne novos entupimentos.</span></div><em>Chamar</em></a>
+    <a href="#pedido"><div><strong>Esgoto</strong><span>Casa, comércio e condomínio.</span></div><em>Chamar</em></a>
+    <a href="#pedido"><div><strong>Limpeza de caixa de gordura</strong><span>Remove resíduos e devolve a vazão.</span></div><em>Chamar</em></a>
+  </div>
+</div></section>
+
+<section style="background:var(--white);border-block:1px solid var(--line)"><div class="wrap">
+  <h2 class="title">Do aviso ao problema resolvido.</h2>
+  <ol class="steps">
+    <li><span><b>Você manda a mensagem</b>Escolha o problema e o bairro. Leva 10 segundos.</span></li>
+    <li><span><b>A central confirma</b>Falamos o orçamento antes de o técnico começar.</span></li>
+    <li><span><b>O técnico desentope</b>Serviço feito, tubulação liberada.</span></li>
+  </ol>
+</div></section>
+
+<section><div class="wrap">
+  <div class="offer">
+    <h2>10% off na sua primeira solicitação.</h2>
+    <p>Avise que é a primeira vez e o desconto entra no seu atendimento.</p>
+    <a class="btn" href="#pedido">Quero meu desconto</a>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2 class="title">Quem já chamou, indica.</h2>
+  <blockquote>
+    “Serviço rápido e eficiente. A equipe é muito profissional e o resultado foi impecável.”
+    <footer>Cleber, gerente de manutenção. Depoimento de exemplo para a demo.</footer>
+  </blockquote>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+  <h2 class="title">Perguntas frequentes</h2>
+  <div class="faq">
+    <details open><summary>O que fazer se meu encanamento estiver entupido?</summary><p>Evite jogar produtos químicos fortes e não force o vaso ou o ralo. Chame a SanVita pelo WhatsApp e descreva o problema.</p></details>
+    <details><summary>Quando contratar um desentupimento?</summary><p>Assim que a água demorar a descer, houver mau cheiro ou refluxo. Quanto antes, menor o risco de dano.</p></details>
+    <details><summary>Vocês atendem à noite e no fim de semana?</summary><p>Sim. O atendimento é 24 horas, todos os dias, em Aracaju e região.</p></details>
+    <details><summary>Como agendar?</summary><p>Pelo botão de WhatsApp desta página ou ligando para (79) 99824-0488. O orçamento é sem custo.</p></details>
+  </div>
+</div></section>
+
+<footer class="site"><div class="wrap">
+  <strong style="color:#fff;font:700 1.2rem var(--display)">Desentupidora SanVita</strong>
+  <p style="margin-top:8px">Aracaju e região · 24 horas<br>
+  <a href="tel:+5579998240488">(79) 99824-0488</a> · <a href="mailto:desentupidorasanvita@hotmail.com">desentupidorasanvita@hotmail.com</a></p>
+  <p class="demo">Site de demonstração. Textos e depoimento são exemplos.</p>
+</div></footer>
+
+<div class="bar">
+  <a class="btn wa" id="go2" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  <a class="btn call" href="tel:+5579998240488">Ligar</a>
+</div>
+
+<script>
+(function(){
+  var NUM="5579998240488";
+  var chips=[].slice.call(document.querySelectorAll(".chip"));
+  var bairro=document.getElementById("bairro");
+  var links=[document.getElementById("go"),document.getElementById("go2")];
+  function update(){
+    var sel=chips.filter(function(c){return c.getAttribute("aria-pressed")==="true"}).map(function(c){return c.textContent});
+    var msg="Olá, SanVita! Preciso de desentupimento: "+(sel.join(", ")||"a definir")+"."+
+      (bairro.value.trim()?" Bairro: "+bairro.value.trim()+".":"")+" Podem me passar o orçamento?";
+    var url="https://wa.me/"+NUM+"?text="+encodeURIComponent(msg);
+    links.forEach(function(a){a.href=url});
+  }
+  chips.forEach(function(c){c.addEventListener("click",function(){
+    c.setAttribute("aria-pressed",c.getAttribute("aria-pressed")==="true"?"false":"true");update();
+  })});
+  bairro.addEventListener("input",update);
+  update();
+})();
+</script>
+</body>
+</html>
